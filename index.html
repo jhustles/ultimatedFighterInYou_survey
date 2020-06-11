@@ -30,6 +30,12 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
+
+  <!-- Survey Plugin 4 line items - fourth script is at the end of the body-->
+  <script type="text/javascript" src="https://unpkg.com/jquery"></script>
+  <script type="text/javascript" src="https://surveyjs.azureedge.net/1.1.1/survey.jquery.js"></script>
+  <link href="https://surveyjs.azureedge.net/1.1.1/survey.css" type="text/css" rel="stylesheet"/>
+
   <!-- =======================================================
   * Template Name: BizPage - v2.0.0
   * Template URL: https://bootstrapmade.com/bizpage-bootstrap-business-template/
@@ -46,7 +52,7 @@
 
       <div id="logo" class="pull-left">
         <h1><a href="#intro" class="scrollto">Ultimate Fighter In You.</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- Uncomment below if you prefer an image logo -->
         <!-- <a href="#intro"><img src="assets/img/logo.png" alt=""></a>-->
       </div>
 
@@ -205,7 +211,7 @@
 
         <header class="section-header">
           <h3>About Our Project</h3>
-          <p>For our passion project, we wanted to a build a machine learning (ML) model that can predict a person's binary fighter classification: Striker or Grappler. Often, individuals leans towards one side either slightly or greatly, regardless of their background. The only way to find out is to put a person's mind in the scenario, and see what choices they make. With that said, we decided to develop ML models that are powered by actual UFC fighter data, including: strikes and grappling metrics related to actual attempts and landed, accuracy, professional record, ranking, as well as win and loss methods, and chose the best one. To make this vision come to fruition, our process includes three overarching steps:</p>
+          <p>For our passion project, we wanted to a build a machine learning (ML) model that can predict a person's binary fighter classification: Striker or Grappler. Often, individuals leans towards one side either slightly or greatly, regardless of their background. The only way to find out is to put a person's mind in the scenario, and see what choices they make. With that said, we decided to a develop ML model that is powered by actual UFC fighter data, including: strikes and grappling metrics related to actual attempts and landed, accuracy, professional record, ranking, as well as their win-by and lose-by methods. To make our vision come to fruition, our process includes three overarching steps:</p>
 
           <!-- <p>To help us answer this question, we developed an ML model using actual UFC fighter data, and a hypothetical survey to predict a participant's preference. Our process includes three overarching steps:</p> -->
 
@@ -221,7 +227,7 @@
               </div>
               <h2 class="title"><a href="#">I. Data Preparation</a></h2>
               <p>
-                We extracted our data came from two sources: Kaggle’s UFC Fighter Dataset that includes all fighter statistics from January 2014 through October 2018 and we web-scraped the UFC Fighter Statistic section using BeautifulSoup4. We transformed the raw datasets using Python, Pandas, and MS Excel for quick percentile ranking analysis.
+                We extracted our data from two sources: Kaggle.com's UFC Fighter Dataset that includes all fighter statistics from January 2014 through October 2018, and we also web-scraped the <a href="http://ufcstats.com/statistics/fighters">UFC Fighter Statistic section</a> using BeautifulSoup4 last year. We transformed the raw datasets using Python, Pandas, and then used MS Excel for quick percentile ranking analysis given limited time.
               </p>
             </div>
           </div>
@@ -234,7 +240,7 @@
               </div>
               <h2 class="title"><a href="#">II. Data Analysis</a></h2>
               <p>
-                Next, we performed statistical analysis and created custom ratios to classify 1,100 fighters based on UFC fight statistics and metrics from actual fighters described in the About section. We then used the output to train three different machine learning models, using Sci-Kit Learn. The three models we analyzed were: linear regression, logistic regression, and a decision tree model. We chose the logistic regression model because it gave us 85% accuracy on both training and test data, to prevent potential overfitting and memorization by the model.
+                Next, we performed statistical analysis and created custom ratios to classify 1,100 fighters based on UFC fight statistics and metrics from fighters described in the "About" section above. We then used the output to train three different machine learning models, using Sci-Kit Learn. The three models we analyzed were: linear regression, logistic regression, and a decision tree model. We chose the logistic regression model because it gave us 85% accuracy on both training and test data, to prevent potential overfitting and memorization by the model.
               </p>
             </div>
           </div>
@@ -247,7 +253,7 @@
               </div>
               <h2 class="title"><a href="#">III. Visualization</a></h2>
               <p>
-                Last, we transformed and loaded our data using: Python, a Pickle file, and a Flask app as the backend engine to render our ML model. Front-end wise to bring our analysis and survey to life, we used HTML, CSS, BootStrap4, JavaScript (ES6), Survey.js, Seaborn, and Tableau to showcase our final product, the "Ultimate Fighter In You". Stay tuned.
+                Last, we transformed and loaded our data using: Python, a Pickle file, and a Flask app as the backend engine to render our ML model. Front-end wise, we brought our analysis with used Seaborn and Tableau, and used Survey.js, JavaScript (ES6), BootStrap4, CSS, and HTML to showcase our final product, the "Ultimate Fighter In You"ML powered survey. Stay tuned.
               </p>
             </div>
           </div>
@@ -859,10 +865,8 @@
       </div> -->
       <div class="credits">
         <!--
-        All the links in the footer should remain intact.
-        You can delete the links only if you purchased the pro version.
         Licensing information: https://bootstrapmade.com/license/
-        Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=BizPage
+
       -->
         Designed by <a href="https://bootstrapmade.com/">Johnny Giang & Jeffery Anthony</a>
       </div>
@@ -887,6 +891,10 @@
   <script src="assets/vendor/superfish/superfish.min.js"></script>
   <script src="assets/vendor/hoverIntent/hoverIntent.js"></script>
   <script src="assets/vendor/jquery-touchswipe/jquery.touchSwipe.min.js"></script>
+
+
+<!-- Survey.js main script -->
+  <script type="text/javascript" src="static/js/survey.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
