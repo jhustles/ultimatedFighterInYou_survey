@@ -1180,7 +1180,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   position: relative;
 }
 
-#team .member .member-info {
+/* #team .member .member-info {
   opacity: 0;
   display: flex;
   justify-content: center;
@@ -1191,7 +1191,31 @@ body.mobile-nav-active #mobile-nav-toggle {
   left: 0;
   right: 0;
   transition: 0.2s;
+} */
+
+#team .member .member-info {
+  opacity: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: 0.2s;
 }
+
+
 
 #team .member .member-info-content {
   margin-top: -50px;
