@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Spam Detector</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    </head>
+    <body>
+
+	<header>
+		<div class="container">
+		    <h2>Salary Predictor</h2>
+	    </div>
+	</header>
+        <div class="container">
+            <img src="https://media.giphy.com/media/xT39DkL2ZGZHA0Qr1S/giphy.gif"/>
+
+            <form action="/predict" method="POST" class="form">
+                <div class="fieldset">
+                    <label>Enter Your Experience Level</label>
+                    <input class="exp" name="exp"/>
+                </div>
+                <input type="submit" class="button" value="predict">
+            </form>
+        </div>
+    </body>
+</html>

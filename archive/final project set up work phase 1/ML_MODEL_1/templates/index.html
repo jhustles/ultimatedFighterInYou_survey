@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Spam Detector</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    </head>
+    <body>
+
+	<header>
+		<div class="container">
+		    <h2>Your Fighting Class</h2>
+	    </div>
+	</header>
+        <div class="container">
+            <form action="/predict" method="POST" class="form">
+                <div class="fieldset">
+                    <label>Enter Your Message Here</label>
+                    <textarea name="message" rows="2" cols="2" ></textarea>
+                </div>
+                <input type="submit" class="button" value="predict">
+            </form>
+        </div>
+    </body>
+</html>

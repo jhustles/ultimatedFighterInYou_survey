@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Spam Detector</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    </head>
+    <body>
+
+	<header>
+		<div class="container">
+		    <h2>Spam Detector For SMS Messages</h2>
+	    </div>
+	</header>
+        <div class="container">
+            <form action="/predict" method="POST" class="form">
+                <div class="fieldset">
+                    <label>Enter Your Estimated Minutes	</label>
+                    <input name="estimated_minutes" type="text" />
+                </div>
+                <div class="fieldset">
+                    <label>Enter Your Striking Attempts To Grappling Attempts Ratio	</label>
+                    <input name="StrikingAttemptsToGrapplingAttempts_Ratio" type="text" />
+                </div>
+                <div class="fieldset">
+                    <label>Enter Your Percent Rank Striking to Grapping Attemps Ratio	</label>
+                    <input name="PercentRank_StrikingtoGrappingAttemps_Ratio" type="text" />
+                </div>
+                <div class="fieldset">
+                    <label>Enter Your Striking To Grappling Time Ratio	</label>
+                    <input name="StrikingToGrapplingTime_Ratio" type="text" />
+                </div>
+                <div class="fieldset">
+                    <label>Enter Your Percent Rank Striking To Grapping Time Ratio	</label>
+                    <input name="PercentRank_StrikingToGrappingTime_Ratio" type="text" />
+                </div>
+                <input type="submit" class="button" value="predict">
+            </form>
+        </div>
+    </body>
+</html>

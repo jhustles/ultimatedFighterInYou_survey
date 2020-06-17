@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		    <h2>Your Fighting Class</h2>
+	    </div>
+    </header>
+    
+            <div class="fieldset">
+                <p><b>Results for Comment</b></p>
+                <div class="results">
+                    {% if prediction > 11.79 %}
+                        <div>
+                                <h2 style="color:white">You're a Striker. Go for the Knock Out!</h2>
+                                <!-- <img src="https://media.giphy.com/media/l0IylR4JqKHLjaP60/giphy.gif"/> -->
+                        </div>
+                       
+                    {% elif prediction > 7.00 %}
+                        <div>
+                                <h2 style="color:white">You're a Hybrid-Striker. Knock 'em out or submit when the opportunity presents itself!</h2>
+                                <!-- <img src="https://media.giphy.com/media/13YOUThVXTPeDu/giphy.gif"/> -->
+                        </div>
+
+                    {% elif prediction > 0.51 %}
+                    <div>
+                            <h2 style="color:white">You're a Hybrid-Grappler. Stand with him until the submission opportunity arises!</h2>
+                            <!-- <img src="https://media.giphy.com/media/13YOUThVXTPeDu/giphy.gif"/> -->
+                    </div>
+                
+                    {% else %}
+                    <div>
+                            <h2 style="color:white">You're a Grappler. Stand and shoot until you get that submission!</h2>
+                            <!-- <img src="https://media.giphy.com/media/13YOUThVXTPeDu/giphy.gif"/> -->
+                    </div>
+                        
+                    {% endif %}
+                </div>
+            </div>
+
+    </div>
+	
+	
+
+</body>
