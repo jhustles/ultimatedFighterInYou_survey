@@ -115,7 +115,8 @@ survey
             //.querySelector('#surveyResult')
             //.textContent = "Result JSON:\n" + JSON.stringify(result.data, null, 3);
             console.log(result.data)
-            fetch("http://127.0.0.1:5000/predict", { 
+            // fetch("http://127.0.0.1:5000/predict", { 
+            fetch("https://fighterinyoumlv2-api-heroku.herokuapp.com/predict", { 
                 body: JSON.stringify(result.data),
                 method: "POST",
                 headers: {
@@ -141,7 +142,7 @@ survey
                     console.log("Striker!");
 
                 }
-                document.querySelector("#surveyResultText").innerHTML = `<h2> '${message}'<h2/>`
+                document.querySelector("#surveyResultText").innerHTML = `<br><h2> '${message}'<h2/>`
                 document.querySelector("#surveyResult").innerHTML = `<img src='${imgURL}' />`
                 
 

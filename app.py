@@ -14,7 +14,7 @@ def home():
 @app.route('/predict', methods=["GET", "POST"])
 def predict():
     
-    ufc_model = open('./data/ufc.pkl','rb')
+    ufc_model = open('./model/ufc.pkl','rb')
     clf = joblib.load(ufc_model)
     
     if request.method == 'POST':

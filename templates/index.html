@@ -15,13 +15,11 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
 
   <!-- Bootstrap CSS File -->
-  <link href="static/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
   <!-- Libraries CSS Files -->
-  <link href="static/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="static/lib/animate/animate.min.css" rel="stylesheet">
-  <link href="static/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.boomcdn.com/libs/animate-css/3.7.0/animate.css">
 
 
   <!-- Main Stylesheet File -->
@@ -38,12 +36,12 @@
   <!-- Third party plugin CSS-->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
 
-  <!-- =======================================================
-    Theme Name: BizPage
-    Theme URL: https://bootstrapmade.com/bizpage-bootstrap-business-template/
-    Author: BootstrapMade.com
-    License: https://bootstrapmade.com/license/
-  ======================================================= -->
+
+  <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
+
+
+
 </head>
 
 <body>
@@ -63,10 +61,12 @@
       <nav id="nav-menu-container">
         <ul class="nav-menu">
           <li class="menu-active"><a href="#intro">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <!-- <li><a href="#services">Services</a></li> -->
-          <li><a href="#portfolio_sec">Analyses</a></li>
           <li><a href="#survey">Fighter In You</a></li>
+          <li><a href="#about">About</a></li>
+
+          <!-- <li><a href="#services">Services</a></li> -->
+          <li><a href="#portfolio">Analyses</a></li>
+          
           <li><a href="#team">Team</a></li>
           <!-- <li class="menu-has-children"><a href="">Drop Down</a>
             <ul>
@@ -76,7 +76,7 @@
               <li><a href="#">Drop Down 5</a></li>
             </ul> -->
           </li>
-          <li><a href="#contact">Contact</a></li>
+          <!-- <li><a href="#contact">Contact</a></li> -->
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
@@ -172,15 +172,38 @@
 <section id="call-to-action" class="wow fadeIn">
   <div class="container text-center">
     <h3>- DISCLAIMER -</h3>
-    <p class="text-lg-center">Our purpose for this project is to blend our love data science and for the sport of mixed martial arts, particularly the UFC. Our website is not affiliated with the actual <a href="www.ufc.com">Ultimate Fighting Championship (UFC)</a>, nor do we claim to be. </p> 
+    <p class="text-lg-center">Our purpose for this project is to blend our love data science and for the sport of mixsed martial arts, particularly the UFC. Our website is not affiliated with the actual <a href="www.ufc.com">Ultimate Fighting Championship (UFC)</a>, nor do we claim to be. </p> 
     <p class="text-lg-center"> If you'd like to learn more about their organization or reach out to them, please visit their official website in the link above. Otherwise, please click "Proceed" or scroll down to the next section. </p>
 
     <p class="text-lg-center">Lastly, shout out to all the fight fans all over the world! Hope you enjoy and find the "Ultimate Fighter In You".</p>
 
-    <p class="text-lg-center">Team Zeta</p>
-    <a class="cta-btn scrollto" href="#about">Proceed</a>
+    <!-- <p class="text-lg-center">Team Zeta</p> -->
+    <a class="cta-btn scrollto" href="#survey">Proceed</a>
   </div>
 </section><!-- End Call To Action Section -->
+
+
+    <!--==========================
+      SURVEY Section
+    ============================-->
+    <!-- <section id="survey" class="wow fadeInUp"> -->
+  <section id="survey" class="section bg-dark wow fadeInUp">
+      <div class="container">
+
+        <header class="section-header wow fadeInUp">
+          <h3 style="color: #18d26e;"><strong>Find Fighter In You.</strong></h3>
+        </header>
+
+        <!-- SURVEY BOXES - utilize JavaScript -->
+        <div id="surveyElement" class="wow fadeInUp"></div>
+        <br>
+        <div id="surveyResultText" style="margin-top: 1rem; text-align: center; margin:0 auto"></div>
+        
+        <div id="surveyResult" style="text-align: center; margin:0 auto"></div>
+        
+      </div>
+    </section>
+
 
 
     <!--==========================
@@ -193,8 +216,9 @@
           <h3>About Our Project</h3>
           Our project consists of two components:
           <ol>
-            <li>Webscraping the UFC's Fighter Stats Section, transforming the data, and creating meaningful visualizations</li>
             <li> Build a Supervised machine learning (ML) classification model that can predict whether a person innately is a striker or grappler based on a set of user inputs</li>
+            <li>Webscraping the UFC's Fighter Stats Section, transforming the data, and creating meaningful visualizations</li>
+            
           </ol>
         </header>
 
@@ -212,14 +236,18 @@
       <div class="container">
 
         <div class="row about-cols">
-          <!-- <div class="customFlex"></div> -->
+
 
               <div class="col-md-4 col-sm-12 wow fadeInUp">
               
                 <div class="about-col">
                   <div class="img">
                     <img src="static/img/about-mission.jpg" alt="" class="img-fluid">
-                    <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
+                    
+
+                    
+                    <div class="icon"><ion-icon name="speedometer-outline" size="large"></ion-icon></div>
+
                   </div>
                   <h2 class="title">I. Data Preparation</h2>
                   <p>
@@ -233,7 +261,10 @@
                 <div class="about-col">
                   <div class="img">
                     <img src="static/img/about-plan.jpg" alt="" class="img-fluid">
-                    <div class="icon"><i class="ion-ios-list-outline"></i></div>
+                    
+                    <div class="icon"><ion-icon name="list-outline" size="large"></ion-icon></div>
+
+
                   </div>
                   <h2 class="title">II. Data Analysis</h2>
                   <p>
@@ -246,7 +277,9 @@
                 <div class="about-col">
                   <div class="img">
                     <img src="static/img/about-vision.jpg" alt="" class="img-fluid">
-                    <div class="icon"><i class="ion-ios-eye-outline"></i></div>
+
+                    <div class="icon"><ion-icon name="eye-outline" size="large"></ion-icon></div>
+
                   </div>
                   <h2 class="title">III. Visualization</h2>
                   <p>
@@ -286,11 +319,11 @@
       
 
         <div class="container-fluid p-0">
-           
+
               <div class="row portfolio-container">
 
                 <div class="col-lg-4 col-sm-6 mb-4 portfolio-item filter-webscrape  wow fadeInUp" >
-                 
+
                     <a class="portfolio-box " href="static/img/portfolio/fullsize/fightingStylePie.png" title="The most common stance is Orthodox, which is often seen with right-handed fighters. This is because by leading with their weaker left-hand and foot first, it allow the fighter to keep their strong arm loaded for a power-shot often seen in boxing. Conversely, southpaw is for most common for left-handed figthers. The least common fighting style are Open Stance and Sideways, often used by figthers with a wrestling and Karate background, respectively. By definition Open Stance is the position where your feet are facing when facing your opponent. They are squared up and the body is about a 45 degree angle to the other fighter. Sideways stance the name speaks for itself. The fighter also stands with a slight bend in their knees, and often keeps a healthy distance, enabling mobility to move in-and-out for calculated timed strikes, and even throw kicks at the head, body or legs."
                         ><img class="img-fluid" src="static/img/portfolio/thumbnails/fightingStylePie.png" alt="" />
                         <div class="portfolio-box-caption">
@@ -301,15 +334,15 @@
                   
                 </div>               
                 <div class="col-lg-4 col-sm-6 mb-4 portfolio-item filter-webscrape  wow fadeInUp">
-                 
-                    <a class="portfolio-box" href="static/img/portfolio/fullsize/histogramWeightClasses.png" title="The histrogram illustrates the weight group with the most fighters are the 155lb to 170lb group. We can infer from the chart that if we were able to increase the population of fighters in this dataset to include fighters from all legitmate MMA promotions across the world, we would see a normal distrubtion of fighters across the weight classes."
+
+                    <a class="portfolio-box" href="static/img/portfolio/fullsize/histogramWeightClasses.png" title="The histogram illustrates the weight group with the most fighters are the 155lb to 170lb group. We can infer from the chart that if we were able to increase the population of fighters in this dataset to include fighters from all legitmate MMA promotions across the world, we would see a normal distrubtion of fighters across the weight classes."
                         ><img class="img-fluid" src="static/img/portfolio/thumbnails/histogramWeightClasses.png" alt="" />
                         <div class="portfolio-box-caption">
                             <div class="project-category text-white-50">WebScraped Data - July 2019</div>
                             <div class="project-name">Weight Classes</div>
                         </div></a
                     >
-               
+
                 </div>
 
                 <div class="col-lg-4 col-sm-6 mb-4 portfolio-item filter-webscrape  wow fadeInUp">
@@ -378,7 +411,7 @@
                             <div class="project-name">The Inputs</div>
                         </div></a
                     >
-                 
+
               </div>
               
               <div class="col-lg-4 col-sm-6 mb-4 portfolio-item filter-machinelearning  wow fadeInUp">
@@ -422,26 +455,7 @@
 </section>
 
 
-    <!--==========================
-      SURVEY Section
-    ============================-->
-    <!-- <section id="survey" class="wow fadeInUp"> -->
-    <section id="survey" class="section bg-dark wow fadeInUp">
-      <div class="container">
 
-        <header class="section-header wow fadeInUp">
-          <h3 style="color: #18d26e;"><strong>Find Fighter In You.</strong></h3>
-        </header>
-
-        <!-- SURVEY BOXES - utilize JavaScript -->
-        
-        
-        <div id="surveyElement" class="wow fadeInUp"></div>
-        <div id="surveyResultText" style="text-align: center; margin:0 auto"></div>
-        <div id="surveyResult" style="text-align: center; margin:0 auto"></div>
-        
-      </div>
-    </section>
 
     
 
@@ -449,16 +463,12 @@
       Team Section
     ============================-->
     <section id="team">
-
-
       <!-- original -->
-      <!-- <div class="container"> -->
       <div class="container">
         
         <!-- copy -->
         <div class="section-header wow fadeInUp">
-          <h3>Meet The Creators</h3>
-          <!-- <p></p> -->
+          <h3>The Team</h3>
         </div>
 
 
@@ -531,90 +541,34 @@
   <!--==========================
     Footer
   ============================-->
-  <section id="contact" class="section-bg wow fadeInUp">
-    <div class="container">
-
-      <div class="section-header">
-        <h3>Contact Us</h3>
-        <p>If you'd like to leave feedback or contact us regarding opportunities, please fill out the form below, and send it our way. Thank you for viewing!🙏❤️️</p>
-      </div>
-
-      <!-- <div class="row contact-info">
-
-        <div class="col-md-4">
-          <div class="contact-address">
-            <i class="ion-ios-location-outline"></i>
-            <h3>Address</h3>
-            <address>A108 Adam Street, NY 535022, USA</address>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="contact-phone">
-            <i class="ion-ios-telephone-outline"></i>
-            <h3>Phone Number</h3>
-            <p><a href="tel:+155895548855">+1 5589 55488 55</a></p>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="contact-email">
-            <i class="ion-ios-email-outline"></i>
-            <h3>Email</h3>
-            <p><a href="mailto:info@example.com">info@example.com</a></p>
-          </div>
-        </div>
-
-      </div> -->
-
-      <div class="form">
-        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-              <div class="validate"></div>
-            </div>
-            <div class="form-group col-md-6">
-              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-              <div class="validate"></div>
-            </div>
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-            <div class="validate"></div>
-          </div>
-          <div class="form-group">
-            <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-            <div class="validate"></div>
-          </div>
-          <!-- <div class="mb-3">
-            <div class="loading">Loading</div>
-            <div class="error-message"></div>
-            <div class="sent-message">Your message has been sent. Thank you!</div>
-          </div> -->
-          <div class="text-center"><button type="submit">Send Message</button></div>
-        </form>
-      </div>
-
-    </div>
-  </section><!-- End Contact Section -->
+  
 
   <footer id="footer">
     <div class="footer-top">
       <div class="container">
         <div class="row">
-
-          <div class="col-lg-4 col-md-6 footer-info">
+          <div class="col-lg-6 col-md-6 footer-info">
             <h3>Ultimate Fighter In You. </h3>
             <!-- <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p> -->
           </div>
 
-          <div class="col-lg-4 col-md-6 footer-links">
+
+          <!-- <div class="col-lg-4 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem marada parida nodela caramase seza.</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit"  value="Subscribe">
+            </form>
+          </div> -->
+
+
+          <div class="col-lg-6 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
+              <li><i class="ion-ios-arrow-right"></i> <a href="https://public.tableau.com/profile/johnny7819#!/vizhome/UFCData_Oct2018/Scatterplot_S?publish=yes">Our Tableau Interactive Charts</a></li>
               <li><i class="ion-ios-arrow-right"></i> <a href="https://www.ufc.com/">UFC Home Page</a></li>
               <li><i class="ion-ios-arrow-right"></i> <a href="https://www.sherdog.com/">Sherdog MMA News</a></li>
-              <li><i class="ion-ios-arrow-right"></i> <a href="https://public.tableau.com/profile/johnny7819#!/vizhome/UFCData_Oct2018/Striker_AllTime_July19?publish=yes">Tableau Interactive Charts</a></li>
+
               <!-- <li><i class="ion-ios-arrow-right"></i> <a href="#">Terms of service</a></li>
               <li><i class="ion-ios-arrow-right"></i> <a href="#">Privacy policy</a></li> -->
             </ul>
@@ -640,17 +594,21 @@
 
           </div> -->
 
-          <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Our Newsletter</h4>
-            <!-- <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem marada parida nodela caramase seza.</p> -->
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit"  value="Subscribe">
-            </form>
-          </div>
+
+
+
 
         </div>
       </div>
     </div>
+
+  <!-- =======================================================
+    Theme Name: BizPage
+    Theme URL: https://bootstrapmade.com/bizpage-bootstrap-business-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+
 
     <div class="container">
       <!-- <div class="copyright">
@@ -664,20 +622,35 @@
   </footer><!-- #footer -->
 
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-  <script src="static/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="static/lib/wow/wow.min.js"></script>
+  <!-- <script src="static/lib/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+  <!-- <script src="static/lib/wow/wow.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+
+
 
   <!-- SURVEY PLUGIN's - FLASK AND JS files -->
   <script type="text/javascript" src="static/js/survey.js"></script>
 
-  <script src="static/lib/touchSwipe/jquery.touchSwipe.min.js"></script>
+  <!-- <script src="static/lib/touchSwipe/jquery.touchSwipe.min.js"></script> -->
+
+<script src="https://cdn.tutorialjinni.com/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+
 
   <!-- Third party plugin JS-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-  <script src="static/lib/isotope-layout/isotope.pkgd.min.js"></script>
+
+
+  <!-- <script src="static/lib/isotope-layout/isotope.pkgd.min.js"></script> -->
+
+  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
   <!-- Contact Form JavaScript File -->
   <!-- <script src="contactform/contactform.js"></script> -->
 
@@ -686,3 +659,5 @@
 
 </body>
 </html>
+
+
