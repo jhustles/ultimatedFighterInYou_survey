@@ -4,27 +4,25 @@
 
 ![javascript](./static/img/readme_images/javascript.png)
 ![surveyjs](./static/img/readme_images/survey.jpg)
-![python](./static/img/readme_images/python.png)
+![python](./static/img/readme_images/python.jpg)
 ![scikitlearn](./static/img/readme_images/scikitlearn.png)
 ![beautifulsoup](./static/img/readme_images/beautifulsoup.png)
-![tableau](./static/img/readme_images/tableau.png)
-
-
-[Visit this project here. ](https://fighterinyoumlv2-api-heroku.herokuapp.com/)
+![tableau](./static/img/readme_images/tableau.jpg)
 
 
 ## About This Project
 Our project consists of two components:
-    
-    * Build a Supervised machine learning (ML) classification model that can predict whether a person innately is a striker or grappler based on a set of user inputs
-    * Webscraping the UFC's Fighter Stats Section, transforming the data, and creating meaningful visualizations
+
+-  Build a Supervised machine learning (ML) classification model that can predict whether a person innately is a striker or grappler based on a set of user inputs
+- Webscraping the UFC's Fighter Stats Section, transforming the data, and creating meaningful visualizations
   
 One of the most efficient ways to discover this about a person (without having to actually throw them into an octagon to fight) is by engaging their mind with a hypthetical scenario, and surveying them. With that said, we created ML model to make predictions based on a set of user inputs on the backend, and created a survey on the frontend. Our ML model that we designed uses UFC fighter data related to strikes and grappling metrics including: estimated timed on each activitiy, both attempts and landed for volume and accuracy, and their win-by and lose-by methods.
 
 As MMA fans ourselves, we understand that this a grossly oversimplification because there are a large subset of talented and unique fighters that make it truly difficult to put them in a box, let alone program a model to pinpoint styles one possesses. For the purposes of this project, our thesis is that we believe that individuals innately lean towards either being a striker or a grappler, slightly or greatly.
 
 
-## System Prerequisites - Running this project locally
+[## Visit this project here.](https://fighterinyoumlv2-api-heroku.herokuapp.com/)
+## OR Running this project locally - System Prerequisites
 * Python >= 3.6 and the associated libraries:
 * flask import Flask, render_template, url_for, request, redirect, jsonify
 * flask_cors import CORS, cross_origin
