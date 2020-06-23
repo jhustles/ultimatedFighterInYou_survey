@@ -21,7 +21,7 @@ One of the most efficient ways to discover this about a person (without having t
 As MMA fans ourselves, we understand that this a grossly oversimplification because there are a large subset of talented and unique fighters that make it truly difficult to put them in a box, let alone program a model to pinpoint styles one possesses. For the purposes of this project, our thesis is that we believe that individuals innately lean towards either being a striker or a grappler, slightly or greatly.
 
 
-[## Visit this project here.](https://fighterinyoumlv2-api-heroku.herokuapp.com/)
+[Visit this project here.](https://fighterinyoumlv2-api-heroku.herokuapp.com/)
 ## OR Running this project locally - System Prerequisites
 * Python >= 3.6 and the associated libraries:
 * flask import Flask, render_template, url_for, request, redirect, jsonify
